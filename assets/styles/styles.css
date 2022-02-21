@@ -1,0 +1,109 @@
+html {
+  --light-cyan: hsl(193, 38%, 86%);
+  --neon-green: hsl(150, 100%, 66%);
+  --grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  background: var(--dark-grayish-blue);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  background: var(--grayish-blue);
+  max-width: 54.5rem;
+  border-radius: 1rem;
+  position: relative;
+  padding: 5rem;
+}
+
+.advice-number,
+.number {
+  font-size: 1.7rem;
+  color: var(--neon-green);
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+.advice {
+  margin-top: 2rem;
+  font-size: 2.8rem;
+  color: var(--light-cyan);
+  text-align: center;
+}
+
+.advice::before {
+  content: "\275D";
+}
+
+.advice::after {
+  content: "\275E";
+}
+
+.separator {
+  margin-top: 2rem;
+  height: 2rem;
+  background-image: url(../images/pattern-divider-desktop.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: contrast(0.6);
+}
+
+button {
+  display: flex;
+  width: 6.5rem;
+  height: 6.5rem;
+  border-radius: 50%;
+  background: var(--neon-green);
+  border: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: box-shadow 0.7s;
+  transition: transform 0.5s;
+  position: absolute;
+  bottom: -3rem;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+
+button:hover {
+  box-shadow: 0 0 50px var(--neon-green);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 550px) {
+  .container {
+    padding: 4.3rem 2.9rem;
+    width: 80%;
+  }
+
+  .advice {
+    margin-top: 3.4rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .separator {
+    margin-top: 2.2rem;
+  }
+}
